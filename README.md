@@ -86,7 +86,7 @@ frontEnd-test-and-cov
 
 6、如果一切都OK，在当前工程根目录下执行grunt pre(仅第一次需要执行), grunt，你就可以开始编写测试代码了。
 
-7、测试代码样例如工程目录test/runner.html，和test/spec.js，nb的你肯定一看就明白了。
+7、测试代码样例如工程目录test/runner.html(只需要引入all.js和all.css即可)，和test/spec.js，nb的你肯定一看就明白了。
 
 8、获得结果,只要直接打开runner.html就可以看到如下截图
 <img src="http://wufeng520tl.duapp.com/img/result.png", alt="http://wufeng520tl.duapp.com/img/result.png" />
