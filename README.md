@@ -57,6 +57,7 @@ grunt版本，自动插针覆盖率
 5、向GruntFile.js里面加入如下代码（目录结构可以根据当前目录结构进行改变）：
 ```
     // prefix 预处理部分，由于grunt-cover有错误，所以需要使用自带文件对其进行copy
+    // 也可以直接将工程vendor/js/grunt-coverjs/coverjs文件拷贝到node_modules/grunt-coverjs/tasks下，覆盖同名文件
     copy: {
       main: {
         files: [
@@ -85,7 +86,6 @@ grunt版本，自动插针覆盖率
         }
       }
       // 由于grunt-coverjs有bug，需要做修复，这里需要做个修复
-      // 也可以直接将工程vendor/js/grunt-coverjs/coverjs文件拷贝到node_modules/grunt-coverjs/tasks下，覆盖同名文件
       grunt.registerTask('preFix', ['copy']);
       // 注册grunt任务，也可以修改default名称
       grunt.registerTask('default', ['cover', 'watch']);
