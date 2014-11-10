@@ -49,6 +49,7 @@ grunt版本，自动插针覆盖率
     "grunt": "~0.4.0",
     "grunt-coverjs": "*",
     "grunt-contrib-watch": "~0.5.3",
+    "load-grunt-tasks": "~0.3.0",
 ```
 3、执行npm代码 npm install
 
