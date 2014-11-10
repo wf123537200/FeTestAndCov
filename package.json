@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-uglify": "*",
+    "load-grunt-tasks": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-coverjs": "*",
+    "grunt-contrib-copy": "*",
+  },
+
+  "description": "fe-test-and-cov",
+  "main": "Gruntfile.js"
+}

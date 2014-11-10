@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>test Runner</title>
+    <!-- 必须要引入以下两个css -->
+    <link type="text/css" rel="stylesheet" charset="utf-8" href="../vendor/css/mocha.css" />
+    <link type="text/css" rel="stylesheet" charset="utf-8" href="../vendor/css/reporter.css" />
+</head>
+<body>
+    <!-- 结果展示区 -->
+    <div id="mocha"></div>
+    <div id="coverage"></div>
+    <div id="menu"></div>
+
+    <!-- js引入 -->
+    <!-- 基础库部分 -->
+    <script src="../vendor/js/underscore.js"></script>
+    <!-- mocha 部分-->
+    <script src="../vendor/js/mocha.js"></script>
+    <script src="../vendor/js/expect.js"></script>
+    <!-- -->
+    <script src="../vendor/js/JSCovReporter.js"></script>
+    <script src="../vendor/js/reporter.js"></script>
+    <!-- 需要引入的测试代码依赖js -->
+    <script src="../vendor/js/sea.js"></script>
+
+
+<script>
+    window.onload = function() {
+        window.__$coverObject = {};
+
+        mocha.ui('bdd');
+        mocha.setup({
+            timeout: 100000,
+            reporter: 'html'
+        });
+
+        seajs.use(['./spec.js'], function() {
+            mocha.run(function () {
+                if (typeof window.__$coverObject === 'undefined') console.error('测试文件错误！！');
+                new JSCovReporter({coverObject: window.__$coverObject}).report();
+            })
+        })
+    }
+</script>
+</body>
+</html>
