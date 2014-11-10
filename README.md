@@ -89,7 +89,3 @@ frontEnd-test-and-cov
 7、测试代码样例如工程目录test/runner.html，和test/spec.js，nb的你肯定一看就明白了。
 
 8、获得结果,只要直接打开runner.html就可以看到如下截图
-
-
-
-
