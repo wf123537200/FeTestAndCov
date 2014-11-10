@@ -32,6 +32,13 @@ frontEnd-test-and-cov
 <br />
 
 <h3>框架如何使用？</h3>
+简化版本：
+
+1、拷贝all.js和all.css到能引用的目录下，然后参照test/runner.html和test/spec.js写测试代码即可，刷新runner.html即可看到效果。
+
+2、覆盖率统计，需要使用converjs或者使用grunt版本
+
+grunt版本，自动插针覆盖率
 
 1、当然是从github下载代码
 
